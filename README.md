@@ -4,7 +4,7 @@ A production-oriented cloud-native commerce platform built using a microservices
 
 This project demonstrates how to design, build, deploy, monitor, and operate containerized applications using Docker, Kubernetes, GitOps, Infrastructure as Code, CI/CD, and AI-assisted operations.
 
-> This repository is being developed incrementally with a focus on production engineering practices rather than tutorial-based implementation.
+> This repository is being developed incrementally with a focus on production engineering practices.
 ---
 
 ## Welcome
@@ -29,25 +29,25 @@ In this project we will:
 ```
 DevOps-Practice-Guide/
 ├── docs/
-│   ├── part1-system-design.md     # System design foundations (Part 1)
-│   ├── part2-workflow.md          # Full workflow with AIOps (Part 2)
-│   └── claude-setup.md            # Claude Code + MCP server setup
+│   ├── part1-system-design.md     
+│   ├── part2-workflow.md          
+│   └── claude-setup.md            
 ├── projects/
-│   ├── README.md                  # EKS deployment guide (Part 3)
-│   ├── boutique-microservices/    # The application (7 services)
-│   ├── Infrastructure/            # Terraform for AWS provisioning
-│   └── aiops-assistant/           # Bedrock Agent — Kira (Part 4)
+│   ├── README.md                  
+│   ├── boutique-microservices/    
+│   ├── Infrastructure/           
+│   └── aiops-assistant/         
 ├── gitops/
-│   ├── argo-cd.yml                # ArgoCD Application manifest
-│   ├── kustomization.yml          # Kustomize entry point
-│   └── k8s/                       # All Kubernetes manifests
+│   ├── argo-cd.yml                
+│   ├── kustomization.yml          
+│   └── k8s/                       
 └── .github/
-    └── workflows/ci.yml           # GitHub Actions CI pipeline
+    └── workflows/ci.yml          
 ```
 
 ---
 
-## Series Structure
+## Structure
 
 ### Claude Setup — AI Assistant Configuration
 [`docs/claude-setup.md`](docs/claude-setup.md)
@@ -69,74 +69,6 @@ Three things are set up:
 
 **Skills** — domain-specific knowledge packs that improve how Claude reasons about certain topics. The `terraform-skill` is installed, giving Claude deeper context for Terraform module patterns, testing strategies, security scanning, and CI/CD workflows specific to infrastructure-as-code.
 
----
-
-### Part 1 — System Design Foundations
-[`docs/part1-system-design.md`](docs/part1-system-design.md)
-
-We start with system design concepts specifically for cloud and DevOps. This is important whether you're a beginner, intermediate, or senior engineer — because companies don't choose tools randomly. They think about architecture patterns, deployment strategies, scalability, reliability, and cost tradeoffs.
-
-We cover 12 core system design pillars used in modern DevOps architectures, and connect each one directly to something running in this project.
-
----
-
-### Part 2 — Understanding the Workflow
-[`docs/part2-workflow.md`](docs/part2-workflow.md)
-
-Before writing any code or deployment configs, you need to understand how the entire system flows:
-
-- What services we're building and how they communicate
-- How the pipeline works
-- How code moves from developer → CI → deployment → production → AIOps
-
-This is where the full picture comes together — including how AI fits into the workflow.
-
----
-
-### Part 3 — DevOps Project Implementation
-[`projects/README.md`](projects/README.md)
-
-Then we actually build the project. You'll see:
-
-- Docker containers and Docker Compose
-- Kubernetes deployments on EKS
-- CI/CD pipelines with GitHub Actions
-- GitOps automation with ArgoCD
-- Infrastructure provisioning with Terraform
-- Observability with Prometheus and Grafana
-
----
-
-### Part 4 — AIOps Integration
-[`projects/aiops-assistant/README.md`](projects/aiops-assistant/README.md)
-
-Finally, we explore how AI helps with:
-
-- Monitoring and anomaly detection
-- Log analysis at scale
-- Incident response automation
-- DevOps troubleshooting
-
-Because modern DevOps is no longer just automation — it's **automation + intelligence**.
-
----
-
-## Bonus Challenge
-
-You'll get access to this entire repository.
-
-But there's a catch.
-
-The repository includes **intentional issues and troubleshooting tasks**.
-
-Why? Because AI has made things easier. But if you want to grow as an engineer, you must learn how to break systems, debug systems, and fix systems.
-
-Once you implement the project:
-
-1. Fork the repository
-2. Deploy the system
-3. Troubleshoot the issues
-4. Share what you learned — and tag me so I know you're building along
 
 ---
 
